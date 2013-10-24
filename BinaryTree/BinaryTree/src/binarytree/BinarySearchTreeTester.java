@@ -5,10 +5,6 @@
 
 package binarytree;
 
-/**
- *
- * @author Gloria
- */
 public class BinarySearchTreeTester {
 public static void main(String[] args){
         BinarySearchTree test = new BinarySearchTree("jack");
