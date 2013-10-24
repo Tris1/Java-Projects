@@ -5,10 +5,6 @@
 
 package binarytree;
 
-/**
- *
- * @author Gloria
- */
 public class BinarySearchTree<E extends Comparable<E>> {
 
     private Node<E> root;   // reference to tree root
