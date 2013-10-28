@@ -29,9 +29,9 @@ public class Converter {
 		//Set up a for loop to go through the input string and perform the math
 		for(int i = 0; i<input.length(); i++){
 			letter = Character.toString(convertToUpperCase.charAt(currentLetter));
-			System.out.println("The current letter is " + letter);
+			//System.out.println("The current letter is " + letter);
 			index = search(hexAlphabet, letter);
-			System.out.println("The current index is " + index);
+			//System.out.println("The current index is " + index);
 			sum += index * Math.pow(hexBase, i);
 			System.out.println("The current sum is " + sum);
 			currentLetter--;
@@ -41,14 +41,13 @@ public class Converter {
 	}
 	
 	public static int divideAndConquer(int quotient){
-		int a,b,q,r;
-		a = b = q = r = 0;
+		int a,b,r;
+		a = b = r = 0;
 		b = musicalBase;
-		q = quotient;
 		a= quotient/b;
-		r = a%b;
-		System.out.println("The current quotient is " + a);
-		System.out.println("The current remainder is " + r);
+		r = quotient%b;
+		//System.out.println("The current quotient is " + a);
+		//System.out.println("The current remainder is " + r);
 		System.out.println("The current letter is " + musicalAlphabet[r]);
 		
 		if(a > b){
@@ -56,15 +55,15 @@ public class Converter {
 		}else{
 			return a;
 		}
-	return 0;
+	return -1;
 	}
 	
 	public static void main(String[] args){
 		//Verified that the search method works correctly
 		//System.out.println(search(musicalAlphabet, "A"));
 		//System.out.println(mathConversion("feedface"));
-		//int sum = mathConversion("feedface");
-		int sum = mathConversion("32");
+		int sum = mathConversion("feedface");
+		//int sum = mathConversion("32");
 		if(sum < musicalBase){
 			System.out.println("Sum is " + sum);
 			System.out.println("The musical note is " + musicalAlphabet[sum]);
