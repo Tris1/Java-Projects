@@ -21,7 +21,7 @@ public class Converter {
 	public static int mathConversion(String input){
 		int sum = 0;
 		String convertToUpperCase = input.toUpperCase();
-		//System.out.println(convertToUpperCase);
+		
 		//Start at the last character
 		int currentLetter = input.length() - 1;
 		String letter;
@@ -46,8 +46,7 @@ public class Converter {
 		b = musicalBase;
 		a= quotient/b;
 		r = quotient%b;
-		//System.out.println("The current quotient is " + a);
-		//System.out.println("The current remainder is " + r);
+
 		System.out.println("The current letter is " + musicalAlphabet[r]);
 		
 		if(a > b){
@@ -60,18 +59,14 @@ public class Converter {
 	
 	public static void main(String[] args){
 		//Verified that the search method works correctly
-		//System.out.println(search(musicalAlphabet, "A"));
-		//System.out.println(mathConversion("feedface"));
 		int sum = mathConversion("feedface");
 		//int sum = mathConversion("32");
 		if(sum < musicalBase){
 			System.out.println("Sum is " + sum);
 			System.out.println("The musical note is " + musicalAlphabet[sum]);
 		}else{
-		//System.out.println(sum);
 		divideAndConquer(sum);
 	}
-		//System.out.println(50%12);
 	}
 
 }
