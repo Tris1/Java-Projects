@@ -32,7 +32,7 @@ public class Converter {
 			System.out.println("The current letter is " + letter);
 			index = search(hexAlphabet, letter);
 			System.out.println("The current index is " + index);
-			sum += index * Math.pow(musicalBase, i);
+			sum += index * Math.pow(hexBase, i);
 			System.out.println("The current sum is " + sum);
 			currentLetter--;
 		}
@@ -72,6 +72,7 @@ public class Converter {
 		//System.out.println(sum);
 		divideAndConquer(sum);
 	}
+		//System.out.println(50%12);
 	}
 
 }
